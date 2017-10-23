@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		967357971F995E64003496D3 /* SwiftySignature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9673578D1F995E63003496D3 /* SwiftySignature.framework */; };
-		9673579C1F995E64003496D3 /* SwiftySignatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673579B1F995E64003496D3 /* SwiftySignatureTests.swift */; };
-		9673579E1F995E64003496D3 /* SwiftySignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 967357901F995E63003496D3 /* SwiftySignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		967357971F995E64003496D3 /* SignaturePad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9673578D1F995E63003496D3 /* SignaturePad.framework */; };
+		9673579C1F995E64003496D3 /* SignaturePadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9673579B1F995E64003496D3 /* SignaturePadTests.swift */; };
+		9673579E1F995E64003496D3 /* SignaturePad.h in Headers */ = {isa = PBXBuildFile; fileRef = 967357901F995E63003496D3 /* SignaturePad.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96CB276E1F9D11E3008CD745 /* SignaturePad.swift in Headers */ = {isa = PBXBuildFile; fileRef = 96F1718E1F9D0AEC002FB00C /* SignaturePad.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		96F1718F1F9D0AEC002FB00C /* SignaturePad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F1718E1F9D0AEC002FB00C /* SignaturePad.swift */; };
 /* End PBXBuildFile section */
@@ -25,11 +25,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9673578D1F995E63003496D3 /* SwiftySignature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftySignature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		967357901F995E63003496D3 /* SwiftySignature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftySignature.h; sourceTree = "<group>"; };
+		9673578D1F995E63003496D3 /* SignaturePad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SignaturePad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		967357901F995E63003496D3 /* SignaturePad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignaturePad.h; sourceTree = "<group>"; };
 		967357911F995E63003496D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		967357961F995E64003496D3 /* SwiftySignatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySignatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9673579B1F995E64003496D3 /* SwiftySignatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySignatureTests.swift; sourceTree = "<group>"; };
+		967357961F995E64003496D3 /* SignaturePadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignaturePadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9673579B1F995E64003496D3 /* SignaturePadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePadTests.swift; sourceTree = "<group>"; };
 		9673579D1F995E64003496D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96F1718E1F9D0AEC002FB00C /* SignaturePad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				967357971F995E64003496D3 /* SwiftySignature.framework in Frameworks */,
+				967357971F995E64003496D3 /* SignaturePad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +56,8 @@
 		967357831F995E63003496D3 = {
 			isa = PBXGroup;
 			children = (
-				9673578F1F995E63003496D3 /* SwiftySignature */,
-				9673579A1F995E64003496D3 /* SwiftySignatureTests */,
+				9673578F1F995E63003496D3 /* SignaturePad */,
+				9673579A1F995E64003496D3 /* SignaturePadTests */,
 				9673578E1F995E63003496D3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,29 +65,29 @@
 		9673578E1F995E63003496D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9673578D1F995E63003496D3 /* SwiftySignature.framework */,
-				967357961F995E64003496D3 /* SwiftySignatureTests.xctest */,
+				9673578D1F995E63003496D3 /* SignaturePad.framework */,
+				967357961F995E64003496D3 /* SignaturePadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9673578F1F995E63003496D3 /* SwiftySignature */ = {
+		9673578F1F995E63003496D3 /* SignaturePad */ = {
 			isa = PBXGroup;
 			children = (
-				967357901F995E63003496D3 /* SwiftySignature.h */,
+				967357901F995E63003496D3 /* SignaturePad.h */,
 				967357911F995E63003496D3 /* Info.plist */,
 				96F1718E1F9D0AEC002FB00C /* SignaturePad.swift */,
 			);
-			path = SwiftySignature;
+			path = SignaturePad;
 			sourceTree = "<group>";
 		};
-		9673579A1F995E64003496D3 /* SwiftySignatureTests */ = {
+		9673579A1F995E64003496D3 /* SignaturePadTests */ = {
 			isa = PBXGroup;
 			children = (
-				9673579B1F995E64003496D3 /* SwiftySignatureTests.swift */,
+				9673579B1F995E64003496D3 /* SignaturePadTests.swift */,
 				9673579D1F995E64003496D3 /* Info.plist */,
 			);
-			path = SwiftySignatureTests;
+			path = SignaturePadTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,7 +97,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9673579E1F995E64003496D3 /* SwiftySignature.h in Headers */,
+				9673579E1F995E64003496D3 /* SignaturePad.h in Headers */,
 				96CB276E1F9D11E3008CD745 /* SignaturePad.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,9 +105,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9673578C1F995E63003496D3 /* SwiftySignature */ = {
+		9673578C1F995E63003496D3 /* SignaturePad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 967357A11F995E64003496D3 /* Build configuration list for PBXNativeTarget "SwiftySignature" */;
+			buildConfigurationList = 967357A11F995E64003496D3 /* Build configuration list for PBXNativeTarget "SignaturePad" */;
 			buildPhases = (
 				967357881F995E63003496D3 /* Sources */,
 				967357891F995E63003496D3 /* Frameworks */,
@@ -118,14 +118,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftySignature;
+			name = SignaturePad;
 			productName = SwiftySignature;
-			productReference = 9673578D1F995E63003496D3 /* SwiftySignature.framework */;
+			productReference = 9673578D1F995E63003496D3 /* SignaturePad.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		967357951F995E64003496D3 /* SwiftySignatureTests */ = {
+		967357951F995E64003496D3 /* SignaturePadTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 967357A41F995E64003496D3 /* Build configuration list for PBXNativeTarget "SwiftySignatureTests" */;
+			buildConfigurationList = 967357A41F995E64003496D3 /* Build configuration list for PBXNativeTarget "SignaturePadTests" */;
 			buildPhases = (
 				967357921F995E64003496D3 /* Sources */,
 				967357931F995E64003496D3 /* Frameworks */,
@@ -136,9 +136,9 @@
 			dependencies = (
 				967357991F995E64003496D3 /* PBXTargetDependency */,
 			);
-			name = SwiftySignatureTests;
+			name = SignaturePadTests;
 			productName = SwiftySignatureTests;
-			productReference = 967357961F995E64003496D3 /* SwiftySignatureTests.xctest */;
+			productReference = 967357961F995E64003496D3 /* SignaturePadTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 967357871F995E63003496D3 /* Build configuration list for PBXProject "SwiftySignature" */;
+			buildConfigurationList = 967357871F995E63003496D3 /* Build configuration list for PBXProject "SignaturePad" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -174,8 +174,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9673578C1F995E63003496D3 /* SwiftySignature */,
-				967357951F995E64003496D3 /* SwiftySignatureTests */,
+				9673578C1F995E63003496D3 /* SignaturePad */,
+				967357951F995E64003496D3 /* SignaturePadTests */,
 			);
 		};
 /* End PBXProject section */
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9673579C1F995E64003496D3 /* SwiftySignatureTests.swift in Sources */,
+				9673579C1F995E64003496D3 /* SignaturePadTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +219,7 @@
 /* Begin PBXTargetDependency section */
 		967357991F995E64003496D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9673578C1F995E63003496D3 /* SwiftySignature */;
+			target = 9673578C1F995E63003496D3 /* SignaturePad */;
 			targetProxy = 967357981F995E64003496D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -348,10 +348,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftySignature/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SignaturePad/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SwiftySignature;
+				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SignaturePad;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -370,10 +370,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftySignature/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SignaturePad/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SwiftySignature;
+				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SignaturePad;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -386,6 +386,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B92W98DN9L;
 				INFOPLIST_FILE = SwiftySignatureTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SwiftySignatureTests;
@@ -400,6 +401,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B92W98DN9L;
 				INFOPLIST_FILE = SwiftySignatureTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SwiftySignatureTests;
@@ -412,7 +414,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		967357871F995E63003496D3 /* Build configuration list for PBXProject "SwiftySignature" */ = {
+		967357871F995E63003496D3 /* Build configuration list for PBXProject "SignaturePad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9673579F1F995E64003496D3 /* Debug */,
@@ -421,7 +423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		967357A11F995E64003496D3 /* Build configuration list for PBXNativeTarget "SwiftySignature" */ = {
+		967357A11F995E64003496D3 /* Build configuration list for PBXNativeTarget "SignaturePad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				967357A21F995E64003496D3 /* Debug */,
@@ -430,7 +432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		967357A41F995E64003496D3 /* Build configuration list for PBXNativeTarget "SwiftySignatureTests" */ = {
+		967357A41F995E64003496D3 /* Build configuration list for PBXNativeTarget "SignaturePadTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				967357A51F995E64003496D3 /* Debug */,

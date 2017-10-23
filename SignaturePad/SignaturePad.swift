@@ -1,6 +1,6 @@
 //
 //  SignaturePad.swift
-//  SwiftySignature
+//  SignaturePad
 //
 //  Created by Kittikorn Ariyasuk on 23/10/2560 BE.
 //  Copyright © 2560 Kittikorn Ariyasuk. All rights reserved.

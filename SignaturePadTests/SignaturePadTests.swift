@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import SwiftySignature
+@testable import SignaturePad
 
-class SwiftySignatureTests: XCTestCase {
+class SignaturePadTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

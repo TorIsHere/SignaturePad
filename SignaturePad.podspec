@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
                     A Smooth Signature Pad written in Swift. Utilizing UIBezierPath.
                    DESC
 
-  s.homepage     = "https://github.com/TorIsHere/SwiftySignature"
+  s.homepage     = "https://github.com/TorIsHere/SignaturePad"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "TorIsHere" => "kittikorn.a@gmail.com" }
-  s.source       = { :git => "https://github.com/TorIsHere/SwiftySignature.git", :tag => "#{s.version}" }
-  s.source_files  = "SwiftySignature", "SwiftySignature/**/*.{h,m}"
+  s.source       = { :git => "https://github.com/TorIsHere/SignaturePad.git", :tag => "#{s.version}" }
+  s.source_files  = "SignaturePad", "SignaturePad/**/*.{h,m}"
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
   s.ios.deployment_target  = '9.0'
 
