@@ -1,4 +1,5 @@
 language: objective-c
-osx_image: xcode9.0.1
-xcode_sdk: iphonesimulator10.1
-script: 'xcodebuild clean build -project SignaturePad.xcodeproj -scheme SignaturePad CODE_SIGNING_REQUIRED=NO'
+osx_image: xcode9.1
+xcode_sdk: iphonesimulator11.1
+script:
+  - ./fastlane/travis.sh
