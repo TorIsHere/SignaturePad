@@ -1,6 +1,6 @@
 //
-//  SwiftySignatureTests.swift
-//  SwiftySignatureTests
+//  SignaturePadTests.swift
+//  SignaturePadTests
 //
 //  Created by Kittikorn Ariyasuk on 20/10/2560 BE.
 //  Copyright © 2560 Kittikorn Ariyasuk. All rights reserved.

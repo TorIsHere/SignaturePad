@@ -137,7 +137,7 @@
 				967357991F995E64003496D3 /* PBXTargetDependency */,
 			);
 			name = SignaturePadTests;
-			productName = SwiftySignatureTests;
+			productName = SignaturePadTests;
 			productReference = 967357961F995E64003496D3 /* SignaturePadTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -387,9 +387,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B92W98DN9L;
-				INFOPLIST_FILE = SwiftySignatureTests/Info.plist;
+				INFOPLIST_FILE = SignaturePadTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SwiftySignatureTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SignaturePadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,9 +402,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B92W98DN9L;
-				INFOPLIST_FILE = SwiftySignatureTests/Info.plist;
+				INFOPLIST_FILE = SignaturePadTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SwiftySignatureTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.torishere.SignaturePadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
