@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "SwiftySignature"
+  s.name         = "SignaturePad"
   s.version      = "0.1.0"
   s.summary      = "A smooth signature pad with uibezierpath"
 
