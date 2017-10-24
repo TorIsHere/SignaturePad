@@ -120,4 +120,12 @@ import UIKit
         incrementalImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
     }
+    
+    func getSignature() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0.0)
+        self.drawHierarchy(in: self.bounds, afterScreenUpdates: false)
+        let signature = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return signature
+    }
 }
