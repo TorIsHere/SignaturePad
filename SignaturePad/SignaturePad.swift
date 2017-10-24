@@ -8,6 +8,7 @@
 
 import UIKit
 
+@objc
 @IBDesignable open class SignaturePad: UIView {
     
     private var path: UIBezierPath = UIBezierPath()
