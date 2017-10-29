@@ -39,6 +39,7 @@ import UIKit
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        self.isMultipleTouchEnabled = false
         self.backgroundColor = self.bgColor
         path = UIBezierPath()
         path.lineWidth = lineWidth
@@ -122,7 +123,15 @@ import UIKit
         UIGraphicsEndImageContext()
     }
     
-    func getSignature() -> UIImage? {
+    open func clear() -> Void {
+        incrementalImage = nil
+        dot = UIBezierPath()
+        path = UIBezierPath()
+        path.lineWidth = lineWidth
+        self.setNeedsDisplay()
+    }
+    
+    open func getSignature() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0.0)
         self.drawHierarchy(in: self.bounds, afterScreenUpdates: false)
         let signature = UIGraphicsGetImageFromCurrentImageContext()
