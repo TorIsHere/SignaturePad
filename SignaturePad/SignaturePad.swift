@@ -21,6 +21,16 @@ import UIKit
     @IBInspectable private var bgColor: UIColor = UIColor.white
     @IBInspectable private var lineWidth: CGFloat = 3.0
     
+    open var isSigned: Bool {
+        get {
+            guard let _ = incrementalImage else {
+                return false
+            }
+            return true
+        }
+    }
+    
+    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override open func draw(_ rect: CGRect) {
