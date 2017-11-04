@@ -9,6 +9,16 @@
 import UIKit
 
 @objc
+protocol SignaturePadDelegate: class {
+    func didStart()
+    func didFinish()
+    @available(*, unavailable, renamed: "didFinish()")
+    func startedDrawing()
+    @available(*, unavailable, renamed: "didFinish()")
+    func finishedDrawing()
+}
+
+@objc
 @IBDesignable open class SignaturePad: UIView {
     
     private var path: UIBezierPath = UIBezierPath()
@@ -20,6 +30,8 @@ import UIKit
     @IBInspectable private var strokeColor: UIColor = UIColor.black
     @IBInspectable private var bgColor: UIColor = UIColor.white
     @IBInspectable private var lineWidth: CGFloat = 3.0
+    
+    weak var delegate: SignaturePadDelegate?
     
     open var isSigned: Bool {
         get {
@@ -59,6 +71,9 @@ import UIKit
         if let touch = touches.first {
             ctr = 0
             points[0] = touch.location(in: self)
+        }
+        if let delegate = delegate {
+            delegate.didStart()
         }
     }
     
@@ -112,6 +127,10 @@ import UIKit
         path.removeAllPoints()
         dot.removeAllPoints()
         ctr = 0
+        
+        if let delegate = delegate {
+            delegate.didFinish()
+        }
     }
     
     override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
