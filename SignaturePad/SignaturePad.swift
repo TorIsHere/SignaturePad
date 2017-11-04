@@ -9,7 +9,7 @@
 import UIKit
 
 @objc
-protocol SignaturePadDelegate: class {
+public protocol SignaturePadDelegate: class {
     func didStart()
     func didFinish()
     @available(*, unavailable, renamed: "didFinish()")
