@@ -31,7 +31,7 @@ public protocol SignaturePadDelegate: class {
     @IBInspectable private var bgColor: UIColor = UIColor.white
     @IBInspectable private var lineWidth: CGFloat = 3.0
     
-    weak var delegate: SignaturePadDelegate?
+    weak open var delegate: SignaturePadDelegate?
     
     open var isSigned: Bool {
         get {
