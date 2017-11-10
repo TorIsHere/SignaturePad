@@ -28,7 +28,6 @@ public protocol SignaturePadDelegate: class {
     private var ctr: Int = 0
     
     @IBInspectable private var strokeColor: UIColor = UIColor.black
-    @IBInspectable private var bgColor: UIColor = UIColor.white
     @IBInspectable private var lineWidth: CGFloat = 3.0
     
     weak open var delegate: SignaturePadDelegate?
@@ -42,19 +41,19 @@ public protocol SignaturePadDelegate: class {
         }
     }
     
-    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override open func draw(_ rect: CGRect) {
         // Drawing code
         incrementalImage?.draw(in: rect)
+        strokeColor.setStroke()
         path.stroke()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.isMultipleTouchEnabled = false
-        self.backgroundColor = self.bgColor
+        self.strokeColor.setStroke()
         path = UIBezierPath()
         path.lineWidth = lineWidth
     }
@@ -62,7 +61,7 @@ public protocol SignaturePadDelegate: class {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.isMultipleTouchEnabled = false
-        self.backgroundColor = self.bgColor
+        self.strokeColor.setStroke()
         path = UIBezierPath()
         path.lineWidth = lineWidth
     }
@@ -139,13 +138,14 @@ public protocol SignaturePadDelegate: class {
     
     func drawBitmap() -> Void {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0.0)
-        UIColor.black.setStroke()
         if incrementalImage == nil {
             let rectPath = UIBezierPath(rect: self.bounds)
             UIColor.white.setFill()
             rectPath.fill()
         }
         incrementalImage?.draw(at: CGPoint.zero)
+        self.strokeColor.setStroke()
+        self.strokeColor.setFill()
         path.stroke()
         dot.fill()
         incrementalImage = UIGraphicsGetImageFromCurrentImageContext()
