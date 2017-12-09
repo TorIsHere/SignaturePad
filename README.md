@@ -13,7 +13,8 @@ Signature Pad using UIBezierPath written in Swift.
 
 - [x] Free hand drawing pad
 - [x] Clear drawing pad
-- [ ] Color / Pen size selection
+- [x] Pen's color selection
+- [ ] Pen's size selection
 - [ ] Ink pen style signature
 
 ## Installation
