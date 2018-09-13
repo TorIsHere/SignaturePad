@@ -99,14 +99,14 @@ public protocol SignaturePadDelegate: class {
         if ctr < 4 {
             switch ctr {
             case 0:
-                dot = UIBezierPath(ovalIn: CGRect(x: points[0].x, y: points[0].y, width: lineWidth, height: lineWidth))
+                dot = UIBezierPath(ovalIn: CGRect(x: points[0].x, y: points[0].y, width: lineWidth/2, height: lineWidth/2))
                 break
             case 1:
-                dot = UIBezierPath(ovalIn: CGRect(x: points[0].x, y: points[0].y, width: lineWidth, height: lineWidth))
+                dot = UIBezierPath(ovalIn: CGRect(x: points[0].x, y: points[0].y, width: lineWidth/2, height: lineWidth/2))
                 points[0] = points[1]
                 break
             case 2:
-                dot = UIBezierPath(ovalIn: CGRect(x: points[0].x, y: points[0].y, width: lineWidth, height: lineWidth))
+                dot = UIBezierPath(ovalIn: CGRect(x: points[0].x, y: points[0].y, width: lineWidth/2, height: lineWidth/2))
                 points[0] = points[2]
                 break
             case 3:
@@ -157,6 +157,20 @@ public protocol SignaturePadDelegate: class {
         dot = UIBezierPath()
         path = UIBezierPath()
         path.lineWidth = lineWidth
+        self.setNeedsDisplay()
+    }
+    
+    open func setSignature(_image: UIImage) {
+        if incrementalImage == nil {
+            let rectPath = UIBezierPath(rect: self.bounds)
+            UIColor.white.setFill()
+            rectPath.fill()
+        }
+        
+        UIGraphicsBeginImageContext(self.bounds.size)
+        _image.draw(in: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        incrementalImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         self.setNeedsDisplay()
     }
     
