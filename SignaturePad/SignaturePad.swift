@@ -27,9 +27,15 @@ public protocol SignaturePadDelegate: class {
     private var points: [CGPoint] = [CGPoint](repeating: CGPoint(), count: 5)
     private var ctr: Int = 0
     
-    @IBInspectable private var strokeColor: UIColor = UIColor.black
-    @IBInspectable private var lineWidth: CGFloat = 3.0
-    
+    @IBInspectable var strokeColor: UIColor = {
+        if #available(iOS 13, *) {
+            return .label
+        } else {
+            return .black
+        }
+    }()
+    @IBInspectable var lineWidth: CGFloat = 3.0
+
     weak open var delegate: SignaturePadDelegate?
     
     open var isSigned: Bool {
@@ -140,7 +146,7 @@ public protocol SignaturePadDelegate: class {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0.0)
         if incrementalImage == nil {
             let rectPath = UIBezierPath(rect: self.bounds)
-            UIColor.white.setFill()
+            bitmapBackgroundColor.setFill()
             rectPath.fill()
         }
         incrementalImage?.draw(at: CGPoint.zero)
@@ -163,7 +169,7 @@ public protocol SignaturePadDelegate: class {
     open func setSignature(_image: UIImage) {
         if incrementalImage == nil {
             let rectPath = UIBezierPath(rect: self.bounds)
-            UIColor.white.setFill()
+            bitmapBackgroundColor.setFill()
             rectPath.fill()
         }
         
@@ -180,5 +186,12 @@ public protocol SignaturePadDelegate: class {
         let signature = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return signature
+    }
+
+    private var bitmapBackgroundColor: UIColor {
+        guard #available(iOS 13,*) else {
+            return backgroundColor ?? .white
+        }
+        return backgroundColor ?? .systemBackground
     }
 }
