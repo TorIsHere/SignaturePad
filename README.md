@@ -29,7 +29,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'SignaturePad', '~> 1.0.3'
+    pod 'SignaturePad', '~> 1.1.1'
 end
 ```
 
