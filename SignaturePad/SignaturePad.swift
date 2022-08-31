@@ -66,6 +66,10 @@ public protocol SignaturePadDelegate: class {
         path.lineWidth = lineWidth
     }
     
+    override open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        !(gestureRecognizer is UIPanGestureRecognizer)
+    }
+    
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             ctr = 0
